@@ -1,50 +1,90 @@
-# React + TypeScript + Vite
+# 📝 React + TypeScript Posts SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Лёгкое **одностраничное приложение (SPA)**, созданное с помощью **React**, **TypeScript** и **Vite**.  
+Приложение получает посты и комментарии из публичного API **JSONPlaceholder** и демонстрирует работу с **клиентским роутингом**, **асинхронными запросами** и **минималистичным интерфейсом**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Возможности
 
-## Expanding the ESLint configuration
+- 📚 Отображение списка постов из **JSONPlaceholder**
+- 📝 Просмотр **деталей поста** и связанных **комментариев**
+- 🔄 **Клиентский роутинг** с использованием React Router
+- ✅ **TypeScript** с правилами **ESLint**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠 Технологический стек
+
+| Категория   | Инструменты              |
+|------------|---------------------------|
+| Фреймворк  | React 18                  |
+| Язык       | TypeScript                |
+| Сборщик    | Vite 6                    |
+| Роутинг    | React Router 6            |
+| Линтер     | ESLint + TypeScript ESLint |
+
+---
+
+## 🚀 Начало работы
+
+### **Необходимые инструменты**
+- **Node.js** ≥ 18
+- **npm** ≥ 9
+
+---
+
+### **Установка и запуск проекта**
+
+```bash
+git clone <repository-url>
+cd react-ts-spa
+npm install
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+После запуска открой в браузере:  
+[http://localhost:5173](http://localhost:5173)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+---
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## 🏗 Сборка для продакшена
+
+```bash
+npm run build
+npm run preview   # опционально: предпросмотр собранной версии
 ```
+
+---
+
+## 🔍 Проверка кода (Linting)
+
+Для проверки кода на соответствие правилам линтинга используй команду:
+
+```bash
+npm run lint
+```
+
+---
+
+## 📂 Структура проекта
+
+```bash
+src/
+  components/
+    Post.tsx        # Карточка отдельного поста
+    Posts.tsx       # Список всех постов
+    PostDetail.tsx  # Детали поста и комментарии
+  App.tsx           # Настройка роутинга
+  main.tsx          # Точка входа в приложение
+  ...
+```
+
+---
+
+## 🌐 API
+
+Все данные берутся из [JSONPlaceholder](https://jsonplaceholder.typicode.com) — бесплатного REST API для тестирования и прототипирования.
+
+---
