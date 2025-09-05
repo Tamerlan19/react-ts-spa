@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Posts from './components/Posts';
-import PostDetail from './components/Postdetail';
+import PostDetail from './components/PostDetail';
 
 function App(): JSX.Element {
   return (
